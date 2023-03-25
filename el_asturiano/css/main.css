@@ -1,0 +1,162 @@
+@import './animate.css';
+.mix1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: rgb(94, 10, 97);
+  background: linear-gradient(90deg, rgb(94, 10, 97) 0%, rgb(214, 182, 220) 65%, rgb(94, 10, 97) 100%);
+}
+
+/*barra de navegacion*/
+.navbar {
+  padding: 2rem;
+  background: rgb(94, 10, 97);
+  background: linear-gradient(90deg, rgb(94, 10, 97) 0%, rgb(211, 200, 214) 49%, rgb(245, 240, 245) 79%, rgb(234, 230, 236) 100%);
+}
+
+.navbar-collapse {
+  align-items: center;
+  justify-content: space-between;
+}
+
+li :hover {
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  background-color: rgba(201, 152, 177, 0.404);
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-brand {
+    display: center;
+  }
+}
+/* --- fondo de pagina*/
+.fondo {
+  background: rgb(231, 237, 240);
+  background: linear-gradient(360deg, rgb(175, 148, 250) 0%, rgb(178, 113, 228) 29%, rgb(172, 154, 194) 62%, rgb(182, 141, 233) 100%);
+}
+
+/* -- fonts -- */
+@font-face {
+  font-family: "Montserrat";
+  src: url(../media/fonts/Montserrat-VariableFont_wght.ttf);
+}
+* {
+  font-family: "Montserrat";
+  color: white;
+}
+
+/* -- pagina de preguntas --*/
+.consul {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: auto;
+}
+
+/* -- video de pagina principal --*/
+#cabecera {
+  width: auto;
+  height: auto;
+}
+
+#video {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.index {
+  display: grid;
+  justify-content: center;
+  min-height: 500px;
+}
+
+.boton {
+  width: 200px;
+  height: 30px;
+}
+
+.text1 {
+  font-size: 400%;
+}
+@media screen and (max-width: 767px) {
+  .text1 {
+    font-size: 260%;
+  }
+}
+
+/* --- carrusel de marcas*/
+.carrusel {
+  align-items: center;
+  background: #E3E3E3;
+  display: flex;
+  height: 150vh;
+  justify-content: center;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1750px);
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1750px);
+  }
+}
+.slider {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 150px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: auto;
+}
+.slider::before, .slider::after {
+  background: linear-gradient(to right, rgb(182, 141, 233) 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 150px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: 3500px;
+}
+.slider .slider .slide {
+  height: 100px;
+  width: 250px;
+}
+
+/*# sourceMappingURL=main.css.map */
